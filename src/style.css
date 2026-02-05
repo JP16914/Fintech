@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: "Playfair Display", Inter, serif;
+}
+
+
+.hero-bg {
+   position: absolute;
+   inset: 0;
+   background-image:
+      radial-gradient(600px 420px at 14% 28%, rgba(153,27,27,0.24) 0%, rgba(217,119,6,0.12) 30%, rgba(15,23,42,0.06) 60%, transparent 80%),
+      radial-gradient(900px 500px at 85% 70%, rgba(0,0,0,0.06) 0%, transparent 40%),
+      linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,250,0.96));
+   filter: blur(30px);
+   opacity: 1;
+   transform: translateZ(0);
+}
+
+@media (min-width: 768px) {
+   .hero-bg { filter: blur(44px); }
+}
