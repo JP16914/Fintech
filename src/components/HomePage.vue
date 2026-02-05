@@ -80,7 +80,8 @@
                 <h3 class="font-serif text-xl font-bold text-[#3e1313] mb-6">Giới thiệu</h3>
                 <div class="space-y-6 text-gray-600 leading-relaxed text-[15px]">
                     <p>Các vị trí quant hàng đầu - dù là Quant Researcher, Trader, hay Quant Developer - đều đòi hỏi sự kết hợp hiếm có giữa chuyên môn kỹ thuật sâu, kinh nghiệm mô hình hóa thực tế và sự tự tin sẵn sàng phỏng vấn.</p>
-                    <p>QuantFident được tạo ra để loại bỏ những khoảng trống này - mang đến cho bạn lộ trình có cấu trúc từ lý thuyết cốt lõi đến nghiên cứu alpha thực tế.</p>
+                    <p>Tuyển dụng quant không phải cuộc thi về ai “đủ giỏi” - mà là về việc trở thành người xuất sắc nhất cả về kỹ năng kỹ thuật lẫn khả năng thuyết trình. Ngay cả những ứng viên thông minh nhất cũng thất bại nếu họ: mắc sai lầm nhỏ dưới áp lực thời gian; thiếu dự án thực tế sẵn sàng cho CV; gặp khó khăn trong việc truyền đạt quy trình của mình một cách rõ ràng.</p>
+                    <p>QuantFident được tạo ra để loại bỏ những khoảng trống này - mang đến cho bạn lộ trình có cấu trúc từ lý thuyết cốt lõi đến nghiên cứu alpha thực tế, được hỗ trợ bởi những hiểu biết độc quyền từ các quant đang hoạt động hiện tại.</p>
                 </div>
             </div>
             <div>
@@ -95,27 +96,32 @@
         </div>
     </section>
 
-    <section class="container mx-auto max-w-6xl px-4 py-20 relative my-10">
-        <div class="bg-[#FFFDF9] rounded-[3rem] border border-[#f5f0e6] p-10 md:p-16">
+    <section class="container mx-auto max-w-[1400px] px-4 py-20 relative my-10">
+        <div class="bg-[#FFFDF9] rounded-[3rem] border border-[#f5f0e6] p-8 md:p-16">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-serif font-bold text-[#3e1313] mb-4">Lộ trình nghề nghiệp Quant</h2>
                 <p class="text-gray-500 max-w-2xl mx-auto">Khám phá ba vai trò chính trong tài chính định lượng</p>
             </div>
-            <div class="grid lg:grid-cols-3 gap-8">
-                <div v-for="(role, idx) in careerRoles" :key="idx" class="bg-gradient-to-b from-white to-[#fbfbfb] p-8 rounded-2xl shadow-sm border border-gray-100 hover:-translate-y-1 transition-transform duration-300">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div v-for="(role, idx) in careerRoles" :key="idx" class="bg-gradient-to-b from-white to-[#fbfbfb] p-8 rounded-2xl shadow-sm border border-gray-100 hover:-translate-y-1 transition-transform duration-300 flex flex-col h-full">
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-full bg-[#FFF1F1] text-[#991B1B] flex items-center justify-center font-bold text-lg shadow-sm">
+                        <div class="w-10 h-10 rounded-full bg-[#FFF1F1] text-[#991B1B] flex items-center justify-center font-bold text-lg shadow-sm shrink-0">
                             {{ role.icon }}
                         </div>
-                        <h3 class="font-serif font-bold text-xl text-[#0F172A]">{{ role.title }}</h3>
+                        <h3 class="font-serif font-bold text-xl text-[#0F172A] whitespace-nowrap">{{ role.title }}</h3>
                     </div>
-                    <p class="text-gray-600 text-sm mb-8 leading-relaxed h-24">{{ role.desc }}</p>
-                    <h4 class="font-bold text-sm text-[#0F172A] mb-3">Kỹ năng chính:</h4>
-                    <ul class="space-y-2">
-                        <li v-for="(skill, sIdx) in role.skills" :key="sIdx" class="text-gray-500 text-xs flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#D97706]"></span> {{ skill }}
-                        </li>
-                    </ul>
+                    
+                    <p class="text-gray-600 text-sm mb-8 leading-relaxed flex-grow">{{ role.desc }}</p>
+                    
+                    <div class="mt-auto">
+                        <h4 class="font-bold text-sm text-[#0F172A] mb-3">Kỹ năng chính:</h4>
+                        <ul class="space-y-2">
+                            <li v-for="(skill, sIdx) in role.skills" :key="sIdx" class="text-gray-500 text-xs flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#D97706]"></span> {{ skill }}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -171,37 +177,34 @@
         </div>
     </section>
 
-    <section class="container mx-auto max-w-6xl px-4 py-20 relative">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-serif font-bold text-[#3e1313] mb-4">Interview Preparation</h2>
-            <p class="text-gray-500">Master the four pillars of quantitative finance interviews</p>
+    <section class="container mx-auto max-w-6xl px-4 py-16 relative">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-serif font-bold text-[#3e1313] mb-3">Interview Preparation</h2>
+            <p class="text-sm text-gray-500">Master the four pillars of quantitative finance interviews</p>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div v-for="(card, idx) in interviewCards" :key="idx" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div class="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center text-xl mb-4">{{ card.icon }}</div>
-                <h3 class="font-bold text-gray-900 mb-2">{{ card.title }}</h3>
-                <p class="text-sm text-gray-500 leading-relaxed">{{ card.desc }}</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div v-for="(card, idx) in interviewCards" :key="idx" 
+                class="bg-white p-5 rounded-[1.5rem] shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
+            
+            <div class="w-9 h-9 bg-[#FFF1F1] rounded-full flex items-center justify-center mb-4 shrink-0">
+                <span class="text-lg">{{ card.icon }}</span>
             </div>
-        </div>
 
-        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-             <div class="bg-[#FFFDF9] border border-[#e5e5e5] rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-                <div class="text-3xl font-bold text-[#0F172A] mb-1">Unlimited</div>
-                <div class="text-sm text-gray-500">Mock interviews</div>
-             </div>
-             <div class="bg-[#FFFDF9] border border-[#e5e5e5] rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-                <div class="text-3xl font-bold text-[#0F172A] mb-1">2–3+</div>
-                <div class="text-sm text-gray-500">Alpha models</div>
-             </div>
-             <div class="bg-[#FFFDF9] border border-[#e5e5e5] rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-                <div class="text-3xl font-bold text-[#0F172A] mb-1">1 year</div>
-                <div class="text-sm text-gray-500">Support</div>
-             </div>
-        </div>
-        <div class="mt-16 text-center">
-             <p class="text-xl font-serif italic text-gray-800">“Break into quant là cuộc chơi lì đòn và bền bỉ, không cần thiên tài toán.”</p>
-             <p class="text-sm text-gray-500 mt-2">— Mentor Minh Nguyễn</p>
+            <h3 class="font-bold text-black mb-3 text-lg leading-tight">{{ card.title }}</h3>
+            
+            <p class="text-xs text-gray-500 leading-relaxed mb-4">{{ card.desc }}</p>
+
+            <div v-if="card.examples" class="mt-auto">
+                <h4 class="font-bold text-[11px] uppercase tracking-wider text-black mb-2">Examples:</h4>
+                <ul class="space-y-1.5">
+                <li v-for="(ex, eIdx) in card.examples" :key="eIdx" class="text-gray-500 text-[12px] flex items-start gap-1.5">
+                    <span class="text-[#991B1B] font-bold">•</span>
+                    <span>{{ ex }}</span>
+                </li>
+                </ul>
+            </div>
+            </div>
         </div>
     </section>
 
@@ -372,10 +375,10 @@ const skillsGroups = [
 ];
 
 const interviewCards = [
-    { title: "Mental Math & Sequences", icon: "🧮", desc: "Quick calculations, pattern recognition, and numerical estimation under time pressure." },
-    { title: "Brainteasers & Logic", icon: "🧠", desc: "Analytical reasoning, lateral thinking, and problem decomposition skills." },
-    { title: "Technical Coding", icon: "💻", desc: "Algorithm implementation, data structures, and optimization problems." },
-    { title: "Market Making & Trading", icon: "👥", desc: "Pricing under uncertainty, risk management, and market intuition." }
+    { title: "Mental Math & Sequences", icon: "🧮", desc: "Quick calculations, pattern recognition, and numerical estimation under time pressure.",examples: ["Sum of 1/n from n=1 to 100", "Fibonacci patterns", "Probability of card draws"] },
+    { title: "Brainteasers & Logic", icon: "🧠", desc: "Analytical reasoning, lateral thinking, and problem decomposition skills.",examples: ["Monty Hall problem", "Prisoner's dilemma", "Bridge crossing puzzle"] },
+    { title: "Technical Coding", icon: "💻", desc: "Algorithm implementation, data structures, and optimization problems.", examples: ["Two-sum variations", "Dynamic programming", "Tree traversals"] },
+    { title: "Market Making & Trading", icon: "👥", desc: "Pricing under uncertainty, risk management, and market intuition.",examples: ["Bid-ask spread setting", "Inventory risk", "Adverse selection"] }
 ];
 
 const activeFaq = ref(null);
